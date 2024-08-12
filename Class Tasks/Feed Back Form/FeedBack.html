@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+     body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: rgb(2,0,36);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(178,77,176,1) 0%, rgba(18,140,165,1) 89%);
+    }
+    .container {
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(236,221,236,1) 0%, rgba(192,230,191,1) 0%, rgba(18,154,165,1) 95%);
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+    textarea {
+      min-height: 200px;
+    }
+    button {
+      background-color: #00c497;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    input[type="submit"] {
+        background-color: transparent;
+        width: 100%;
+        height: fit-content;
+        font-size: 25px;
+        text-align: center;
+        font-weight: 600;
+        font-style: oblique;
+        padding: 5px;
+        color: rgb(18, 20, 18);
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: rgb(4, 132, 144);
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Feedback Form</h1>
+    <label for="Name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter Your Name">
+    <label for="E-Mail">E-Mail:</label>
+    <input type="email" id="E-Mail" name="E-Mail" placeholder="Enter Your E-Mail">
+    <label for="Subject">Subject:</label>
+    <input type="text" id="Subject" name="Subject" placeholder="Enter Subject">
+    <label for="Feedback">Feedback:</label>
+    <textarea name="Feedback" id="Feedback"></textarea>
+    <input type="submit" value="Submit">
+</div> 
+</body>
+</html>
