@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Pricing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 0 auto;
+            margin-top: 100px;
+            width: fit-content;
+        }
+
+        .container,
+        .container-2,
+        .container-3 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            border-radius: 10px;
+            height: 70vh;
+            width: 30vh;
+            border: 1px solid rgb(192, 181, 181);
+            box-shadow: #455772cd -5px 5px 50px -5px;
+            padding: 20px;
+            margin: 0 20px;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 30px;
+            font-weight: 100;
+            color: #000000;
+            text-align: center;
+        }
+
+        .list {
+            font-size: 15px;
+            font-weight: 100;
+            color: #000000;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 10px;
+        }
+        button {
+            margin: 15px;
+            border-radius: 50px;
+            padding: 20px;
+            background-color: #824caf;
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: black 1px 15px 50px 0px;
+        }
+        h1 {
+            text-align: center;
+            font-weight: 100;
+        }
+        span {
+            font-weight: 700;
+            font-size: 40px;
+            color: #824caf;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h3>Personal</h3>
+            <span class="list">We Think Ahead</span>
+            <h1><span>$29</span> /month</h1>
+            <div class="content">
+                <p>Mobile-Optimized</p>
+                <p>Free Custom Domain</p>
+                <p>Best Web Hosting</p>
+                <p>Out Standing Support Team</p>
+                <p>Our Happy Customers</p>
+            </div>
+            <img src="personal.png" alt="png">
+            <button>READ MORE</button>
+        </div>
+        <div class="container-2">
+            <h3>Business</h3>
+            <span class="list">Special Offer</span>
+            <h1><span style="color: #d7883e;">$38</span> /month</h1>
+            <div class="content">
+                <p>Mobile-Optimized</p>
+                <p>Free Custom Domain</p>
+                <p>Best Web Hosting</p>
+                <p>Out Standing Support Team</p>
+                <p>Our Happy Customers</p>
+            </div>
+            <img src="Business.png" alt="png">
+            <button style="background-color: #d7883e;">READ MORE</button>
+        </div>
+        <div class="container-3">
+            <h3>Enterprise</h3>
+            <span class="list">Our Best Solution</span>
+            <h1><span>$75</span> /month</h1>
+            <div class="content">
+                <p>Mobile-Optimized</p>
+                <p>Free Custom Domain</p>
+                <p>Best Web Hosting</p>
+                <p>Out Standing Support Team</p>
+                <p>Our Happy Customers</p>
+            </div>
+            <img src="Enterprise.png" alt="png">
+            <button>READ MORE</button>
+        </div>
+    </div>
+</body>
+
+</html>

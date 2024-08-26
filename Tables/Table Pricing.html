@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111c44;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .breadcrumb {
+            color: #8a95ad;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #eee;
+        }
+
+        .actions {
+            margin-bottom: 20px;
+        }
+
+        .create-btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1c2541;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .product-table th,
+        .product-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+
+        .product-table th {
+            background-color: #26325e;
+        }
+
+        .product-table td {
+            background-color: #1c2541;
+        }
+
+        .product-table img {
+            width: 50px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-table a {
+            color: #69b3ff;
+            text-decoration: none;
+        }
+
+        .product-table .rating {
+            color: #ffd700;
+        }
+
+        .product-table .star {
+            color: #ffd700;
+        }
+
+        .edit-btn,
+        .delete-btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .edit-btn {
+            background-color: #2196f3;
+            color: white;
+        }
+
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .notice {
+            position: absolute;
+            top: 3%;
+            left: 50%;
+            background-color: #29a745;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <span>You Are Here > App > Ecommerce > Management</span>
+        </div>
+        <h1>Product - <span class="highlight">Management</span></h1>
+        <div class="actions">
+            <button class="create-btn">Create Product</button>
+        </div>
+        <div class="table-container">
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Subtitle</th>
+                        <th>Price($)</th>
+                        <th>Rating</th>
+                        <th>API</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="image1.jpg" alt="Trainers"></td>
+                        <td><a href="#">Trainers</a></td>
+                        <td>Trainers in White</td>
+                        <td>76</td>
+                        <td><span class="rating">4.6</span> <span class="star">★</span></td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="notice">
+            <span>This page is only available in Light Blue React with NodeJS/.NET integration!</span>
+        </div>
+    </div>
+</body>
+
+</html>

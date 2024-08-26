@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .pricing-table {
+            display: flex;
+            gap: 20px;
+        }
+
+        .pricing-plan {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .pricing-plan.hot {
+            position: relative;
+        }
+
+        .pricing-plan.hot::before {
+            content: "HOT";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: gold;
+            color: #fff;
+            font-size: 12px;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .pricing-plan h2 {
+            margin: 0 0 10px;
+            font-size: 22px;
+            color: #fff;
+        }
+
+        .pricing-plan h3 {
+            margin: 0 0 20px;
+            font-size: 32px;
+            color: #333;
+        }
+
+        .pricing-plan table {
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .pricing-plan table th, .pricing-plan table td {
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .pricing-plan table th {
+            background-color: #f5f5f5;
+        }
+
+        .pricing-plan button {
+            background-color: #00bfff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .pricing-plan button:hover {
+            background-color: #009acd;
+        }
+
+        .starter h2 { background-color: #66c2ff; }
+        .econo h2 { background-color: #0099cc; }
+        .standard h2 { background-color: #006699; }
+        .professional h2 { background-color: #003366; }
+
+    </style>
+</head>
+<body>
+
+    <div class="pricing-table">
+        <div class="pricing-plan starter">
+            <h2>Starter</h2>
+            <h3>$10<br>per month</h3>
+            <table>
+                <tr><th>Amount of Space</th><td>10GB</td></tr>
+                <tr><th>Bandwidth per Month</th><td>100GB</td></tr>
+                <tr><th>No. of Email Accounts</th><td>1</td></tr>
+                <tr><th>No. of MySQL Databases</th><td>1</td></tr>
+                <tr><th>24h Support</th><td>Yes</td></tr>
+                <tr><th>Support Tickets per Month</th><td>1</td></tr>
+            </table>
+            <button>Sign Up!</button>
+        </div>
+
+        <div class="pricing-plan econo">
+            <h2>Econo</h2>
+            <h3>$30<br>per month</h3>
+            <table>
+                <tr><th>Amount of Space</th><td>30GB</td></tr>
+                <tr><th>Bandwidth per Month</th><td>200GB</td></tr>
+                <tr><th>No. of Email Accounts</th><td>10</td></tr>
+                <tr><th>No. of MySQL Databases</th><td>10</td></tr>
+                <tr><th>24h Support</th><td>Yes</td></tr>
+                <tr><th>Support Tickets per Month</th><td>3</td></tr>
+            </table>
+            <button>Sign Up!</button>
+        </div>
+
+        <div class="pricing-plan standard hot">
+            <h2>Standard</h2>
+            <h3>$59<br>per month</h3>
+            <table>
+                <tr><th>Amount of Space</th><td>100GB</td></tr>
+                <tr><th>Bandwidth per Month</th><td>500GB</td></tr>
+                <tr><th>No. of Email Accounts</th><td>50</td></tr>
+                <tr><th>No. of MySQL Databases</th><td>50</td></tr>
+                <tr><th>24h Support</th><td>Yes</td></tr>
+                <tr><th>Support Tickets per Month</th><td>5</td></tr>
+            </table>
+            <button>Sign Up!</button>
+        </div>
+
+        <div class="pricing-plan professional hot">
+            <h2>Professional</h2>
+            <h3>$99<br>per month</h3>
+            <table>
+                <tr><th>Amount of Space</th><td>Unlimited</td></tr>
+                <tr><th>Bandwidth per Month</th><td>1000GB</td></tr>
+                <tr><th>No. of Email Accounts</th><td>Unlimited</td></tr>
+                <tr><th>No. of MySQL Databases</th><td>Unlimited</td></tr>
+                <tr><th>24h Support</th><td>Yes</td></tr>
+                <tr><th>Support Tickets per Month</th><td>10</td></tr>
+            </table>
+            <button>Sign Up!</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-profit Pricing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f8fc;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .pricing-table {
+            width: 100%;
+            max-width: 1200px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .plan-cards {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .plan-card {
+            text-align: center;
+            width: 200px;
+        }
+
+        .plan-card img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .plan-card h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .plan-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .plan-card button {
+            background-color: #00b7ff;
+            color: #fff;
+            display: block;
+            flex-direction: row;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 35px;
+            margin-bottom: 10px;
+        }
+
+        .plan-card button:hover {
+            background-color: #0056b3;
+        }
+
+        .plan-card a {
+            color: #565859be;
+            margin-left: -10px;
+            font-size: 14px;
+        }
+
+        .pricing-details {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .pricing-details th, .pricing-details td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .pricing-details th {
+            background-color: #f5f8fc;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .pricing-details tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .pricing-details tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        .pricing-details td {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .green-check {
+            color: green;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Simple Non-profit Pricing</h1>
+
+    <div class="pricing-table">
+
+        <div class="plan-cards">
+            <div class="plan-card">
+               <h3>GoFundMe</h3>
+                <p>Quick and easy online crowdfunding</p>
+                <button>Get Started</button>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="plan-card">
+               <h3>Essential</h3>
+                <p>All the basics for event & team crowdfunding</p>
+                <button>Get Started</button>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="plan-card">
+                <h3>Premium</h3>
+                <p>Everything you need to grow your nonprofit</p>
+                <button>Contact Us</button>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="plan-card">
+                <h3>Enterprise</h3>
+                <p>Advanced features for scaling your nonprofit</p>
+                <button>Contact Us</button>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+
+        <table class="pricing-details">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>GoFundMe</th>
+                    <th>Essential</th>
+                    <th>Premium</th>
+                    <th>Enterprise</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Plan Cost</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                    <td style="color: #00b7ff;">Contact us</td>
+                    <td style="color: #00b7ff;">Contact us</td>
+                </tr>
+                <tr>
+                    <td>Platform Fee</td>
+                    <td>0%</td>
+                    <td>5%</td>
+                    <td>3%</td>
+                    <td style="color: #00b7ff;">Contact us</td>
+                </tr>
+                <tr>
+                    <td>Payment Processing</td>
+                    <td>2.9% + 30¢</td>
+                    <td>2.9% + 30¢</td>
+                    <td>2.4% + 30¢</td>
+                    <td style="color: #00b7ff;">Contact us</td>
+                </tr>
+                <tr>
+                    <th colspan="5">Features</th>
+                </tr>
+                <tr>
+                    <td>Unlimited fundraising campaigns</td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                </tr>
+                <tr>
+                    <td>Easy access to funds</td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                    <td><i class="fas fa-check-circle"></i></td>
+                </tr>
+                <tr>
+                    <td>Mobile optimized</td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                </tr>
+                <tr>
+                    <td>Basic donor data</td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                </tr>
+                <tr>
+                    <td>Team fundraising</td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                </tr>
+                <tr>
+                    <td>Unlimited fundraising events</td>
+                    <td></td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                </tr>
+                <tr>
+                    <td>Comprehensive donor data</td>
+                    <td></td>
+                    <td></td>
+                    <td class="green-check">✔</td>
+                    <td class="green-check">✔</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>
