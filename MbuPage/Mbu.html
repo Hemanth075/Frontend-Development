@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script src="https://kit.fontawesome.com/63589a71f6.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="Fevicon logo.png">
+    <title>Mohan Babu University: University with Top Placements</title>
+    <style>
+        * {
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0%;
+        }
+
+        .navbar {
+            position: relative;
+            background-color: #bc1717;
+            width: 100%;
+            padding: 16px;
+            display: inline-flex;
+        }
+
+        a {
+            position: relative;
+            justify-content: space-between;
+            display: flex;
+            left: 60%;
+            color: white;
+            padding-right: 30px;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        a:hover {
+            color: yellow;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 20px;
+        }
+
+        .icons a {
+            position: relative;
+            left: -50vh;
+            margin-left: 0px;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            text-size-adjust: 100%;
+        }
+
+        .icons a:hover {
+            color: rgb(241, 149, 45);
+        }
+
+        img {
+            padding: 9px;
+            margin-top: -5px;
+            margin-left: 100px;
+        }
+
+        .main-animation {
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 750px;
+            background-image: url("mbu-main-hero-banner.webp");
+            animation: imgslider 30s infinite ease;
+        }
+
+        @keyframes imgslider {
+            0% {
+                background-image: url("mbu-main-hero-banner.webp");
+                animation-delay: 10s;
+            }
+
+            25% {
+                background-image: url("banner4.jpg");
+            }
+
+            50% {
+                background-image: url("banner2.webp");
+            }
+
+            75% {
+                background-image: url("banner3.webp");
+            }
+
+            100% {
+                background-image: url("banner4.jpg");
+            }
+        }
+
+        .text {
+            padding: 25px;
+            margin-left: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            position: absolute;
+            font-family: 'oxygen';
+            color: rgb(0, 0, 0);
+            opacity: 98%;
+            text-align: center;
+            margin-top: 800px;
+            font-size: 26px;
+        }
+
+        .imgslider {
+            position: relative;
+            display: flex;
+            margin-top: 48%;
+            right: -300px;
+            height: 100%;
+            width: 70%;
+            padding: 5px;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .imgslider img {
+            position: relative;
+            width: 100%;
+            height: 188px;
+            margin-left: 20px;
+            object-fit: cover;
+            animation-name: section;
+            animation-duration: 25s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes section {
+            0% {
+                transform: translateX(500%);
+            }
+            50% {
+                transform: translateX(-500%);
+            }
+            100% {
+                transform: translateX(-1000%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#">STUDENTS</a>
+            <a href="#">STAFF</a>
+            <a href="#">ALUMNI</a>
+            <a href="#">NEWS</a>
+            <a href="#">EVENTS</a>
+            <a href="#">MEDIA</a>
+            <a href="#">CONTACT US</a>
+            <div class="icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+        </div>
+        <img src="mbu-logo-1024x590.webp" alt="logo" width="200px" height="120px">
+    </header>
+    <div class="main-animation"></div>
+    <div class="text">
+        <h1>Rankings and <br>
+            accreditations</h1>
+    </div>
+    <div class="imgslider">
+        <img src="1-300x292.png" alt="1">
+        <img src="2-300x292.png" alt="2">
+        <img src="3-300x292.png" alt="3">
+        <img src="4-300x292.png" alt="4">
+        <img src="5-300x292.png" alt="5">
+        <img src="6-300x292.png" alt="6">
+        <img src="7-300x292.png" alt="7">
+        <img src="8-300x292.png" alt="8">
+        <img src="9-300x292.png" alt="9">
+        <img src="10-300x292.png" alt="10">
+    </div>
+</body>
+
+</html>

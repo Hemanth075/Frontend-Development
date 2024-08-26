@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>custom data</title>
+</head>
+
+<body>
+  <h1>Courses</h1>
+  <p>Click to see briefly about my favourite courses:</p>
+  <ul>
+    <li onclick="showDetails(this)" id="c" data-course="high level language">C language</li><br>
+    <li ondblclick="showDetails(this)" id="python" data-course="high level language">Python</li> <br>
+    <li onmousemove="showDetails(this)" id="java" data-course="high level language">Java</li> <br>
+  </ul>
+  <script>
+    function showDetails(course) {
+      var courses = course.getAttribute("data-course");
+      alert(course.innerHTML + " is a " + courses + ".");
+    }
+  </script>
+</body>
+
+</html>

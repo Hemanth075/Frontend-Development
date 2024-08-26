@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href="netflix.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script src="https://kit.fontawesome.com/63589a71f6.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("Netflix BG.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            position: absolute;
+            padding: 25px 60px;
+            z-index: 1;
+        }
+
+        header a img {
+            margin-left: 40px;
+            width: 180px;
+            height: 60px;
+        }
+
+        .container {
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            border-radius: 4px;
+            padding: 70px;
+            height: 650px;
+            width: 450px;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, .75);
+        }
+
+        .container h2 {
+            color: #fff;
+            font-size: 2rem;
+        }
+
+        .container form {
+            margin: 25px 0 65px;
+        }
+
+        form .form-control {
+            height: 50px;
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .form-control input {
+            height: 100%;
+            width: 100%;
+            background: #37373755;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            border: rgba(255, 255, 255, 0.59) 1px solid;
+            color: #fff;
+            font-size: 1rem;
+            padding: 0 20px;
+        }
+
+        .form-control input:is(:focus, :valid) {
+            background: #444;
+            padding: 16px 20px 0;
+        }
+
+        .form-control label {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            pointer-events: none;
+            color: #8c8c8c;
+            transition: all 0.1s ease;
+        }
+
+        .form-control input:is(:focus, :valid)~label {
+            font-size: 0.75rem;
+            transform: translateY(-130%);
+        }
+
+        form button {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            padding: 16px 0;
+            font-size: 1rem;
+            background: #e50914;
+            color: #fff;
+            font-weight: 500;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+            margin: 25px 0 10px;
+            cursor: pointer;
+            transition: 0.1s ease;
+        }
+
+        form button:hover {
+            background: #c40812;
+        }
+
+        .container a {
+            text-decoration: none;
+        }
+
+        .container a:hover {
+            text-decoration: underline;
+        }
+
+        .container :where(label, p, small, a) {
+            color: #b3b3b3;
+        }
+
+        form .form-help {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        form .remember-me {
+            display: flex;
+        }
+
+        form .remember-me input {
+            margin-right: 5px;
+            accent-color: #b3b3b3;
+        }
+
+        form .form-help :where(label, a) {
+            font-size: 0.9rem;
+        }
+
+        .container p a {
+            color: #fff;
+        }
+
+        .container small {
+            display: block;
+            margin-top: 15px;
+            color: #b3b3b3;
+        }
+
+        .container small a {
+            color: #0071eb;
+        }
+
+        footer {
+            background-color: #000000;
+            color: #a9a9a9af;
+            padding: 15px;
+            position: relative;
+            bottom: -85%;
+            padding-right: -800px;
+            padding-left: 100px;
+            margin-top: 10px;
+            height: 40vh;
+            width: 100%;
+        }
+
+        footer p {
+            padding-left: 100px;
+            margin-left: 10%;
+            margin-top: 50px;
+        }
+
+        footer ul {
+            justify-content: space-between;
+            list-style: none;
+            padding: 50px;
+            margin-left: 70px;
+            display: flex;
+            position: relative;
+            width: 80%;
+            padding-right: -850px;
+            justify-content: space-around;
+
+        }
+
+        footer ul li a {
+            color: #a9a9a9af;
+        }
+
+        button {
+            background-color: #000000;
+            border: 1px rgba(120, 116, 116, 0.248) solid;
+            color: white;
+        }
+
+        span {
+            padding: 20px 45px;
+            color: #a9a9a9af;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        select {
+            background-color: black;
+            color: white;
+            padding: 2px 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+        <a href="#"><img src="Netflix Logo.png" alt="logo"></a>
+    <div class="container">
+        <h2>Sign In</h2>
+        <form action="#">
+            <div class="form-control">
+                <input type="text" id="name" required>
+                <label>Email or phone number</label>
+            </div>
+            <div class="form-control">
+                <input type="password" id="pswd" required>
+                <label>Password</label>
+            </div>
+            <button type="submit" onclick="save()">Sign In</button>
+            <div class="form-help">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <a href="#">Need help?</a>
+            </div>
+        </form>
+        <p>New to Netflix? <a href="#">Sign up now</a></p>
+        <small>
+            This page is protected by Google reCAPTCHA to ensure you're not a bot.
+            <a href="#">Learn more.</a>
+        </small>
+    </div>
+    <footer>
+        <p>Questions? Call 000-800-919-1694</p>
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Cookie Preferences</a></li>
+            <li><a href="#">Corporate Information</a></li>
+        </ul>
+        <button class="language"></i>
+            <select name="Lang" id="lang">
+                <option value="en">English</option>
+                <option value="hn">Hindi</option>
+            </select>
+        </button>
+    </footer>
+    <script>
+        function save() {
+            {
+                var x = document.getElementById("name").value;
+                localStorage.setItem("Username", x);
+                var y = document.getElementById("pswd").value;
+                localStorage.setItem("Password", y);
+                // localStorage.clear();
+                alert("Data Stored Succesfully");
+            }
+
+        }
+    </script>
+</body>
+
+</html>
