@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        button, input {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+        }
+        #hoverBox {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive JS Events</h1>
+        <button id="clickButton">Click Me!</button>
+        <p id="clickMessage"></p>
+        <div id="hoverBox">Hover Over Me!</div>
+        <p id="hoverMessage"></p>
+
+        <input type="text" id="inputField" placeholder="Type something..." />
+        <p id="keyMessage"></p>
+        <form id="myForm">
+            <input type="text" id="nameInput" placeholder="Enter your name" required />
+            <button type="submit">Submit</button>
+            <p id="formMessage"></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('clickButton').addEventListener('click', function() {
+            document.getElementById('clickMessage').innerText = 'Button Clicked!';
+        });
+
+        document.getElementById('hoverBox').addEventListener('mouseover', function() {
+            document.getElementById('hoverBox').style.backgroundColor = 'lightgreen';
+            document.getElementById('hoverMessage').innerText = 'Mouse is hovering!';
+        });
+
+        document.getElementById('hoverBox').addEventListener('mouseout', function() {
+            document.getElementById('hoverBox').style.backgroundColor = 'lightblue';
+            document.getElementById('hoverMessage').innerText = '';
+        });
+        document.getElementById('inputField').addEventListener('keyup', function(event) {
+            document.getElementById('keyMessage').innerText = `You pressed: ${event.key}`;
+        });
+
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            document.getElementById('formMessage').innerText = 'Form submitted successfully!';
+        });
+
+        document.getElementById('nameInput').addEventListener('focus', function() {
+            document.getElementById('formMessage').innerText = 'Input field is focused.';
+        });
+
+        document.getElementById('nameInput').addEventListener('blur', function() {
+            document.getElementById('formMessage').innerText = 'Input field lost focus.';
+        });
+
+        window.addEventListener('load', function() {
+            alert('Page has fully loaded!');
+        });
+
+        window.addEventListener('resize', function() {
+            console.log('Window resized to:', window.innerWidth, 'x', window.innerHeight);
+        });
+
+        document.getElementById('clickButton').addEventListener('dblclick', function() {
+            alert('Button was double-clicked!');
+        });
+    </script>
+</body>
+</html>
