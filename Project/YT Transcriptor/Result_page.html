@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Results</title>
+    <style>
+        .gradient-background {
+            background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+            background-size: 180% 180%;
+            height: 95vh;
+            animation: gradient-animation 10s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            width: 80%;
+            height: 700px;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: aliceblue;
+            position: relative;
+            left: 150px;
+            top: 50px;
+        }
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: rgb(69, 103, 203);
+            font-family: sans-serif;
+        }
+
+        video {
+            position: absolute;
+            top: 135px;
+            left: 550px;
+            width: 30%;
+            height: 30%;
+            margin-bottom: 20px;
+        }
+
+        a {
+            margin: 10px;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+            margin-top: 20px;
+            position: absolute;
+            top: 40vh;
+            left: 200px;
+        }
+
+        iframe {
+            margin-bottom: 20px;
+            position: absolute;
+            left: 520px;
+            top: 15vh;
+        }
+    </style>
+</head>
+
+<body class="gradient-background">
+    <div class="container">
+        <h1>RESULTS</h1>
+        <div class="links">
+            <a
+                href="https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s">https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s</a>
+            <a
+                href="https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s">https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s</a>
+            <a
+                href="https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s">https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s</a>
+            <a
+                href="https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s">https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s</a>
+            <a
+                href="https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s">https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s</a>
+            <a
+                href="https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s">https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s</a>
+            <a
+                href="https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s">https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s</a>
+            <a
+                href="https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s">https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s</a>
+            <a
+                href="https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s">https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s</a>
+            <a
+                href="https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s">https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s</a>
+            <a
+                href="https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s">https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s</a>
+            <a
+                href="https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s">https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s</a>
+            <a
+                href="https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s">https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s</a>
+            <a
+                href="https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s">https://www.youtube.com/watch?v=63yJkbpn4Jw&t=13.24s</a>
+        </div>
+    </div>
+    <iframe width="500px" height="300px" src="videoplayback.mp4"
+        title="YouTube video player" frameborder="0"></iframe>
+    <script>
+        $(document).ready(function () {
+            $('a').click(function (e) {
+                e.preventDefault();
+                const videoSrc = $(this).attr('href');
+                $('#videoPlayer').attr('src', videoSrc);
+                $('#videoPlayer')[0].play();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
